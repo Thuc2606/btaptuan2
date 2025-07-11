@@ -58,7 +58,7 @@ fun BaiTapTuan2App() {
         Button(
             onClick = {
                 val age = ageInput.toIntOrNull()
-                result = if (age != null) {
+                result = if (age != null && age >= 0 && age in 0..150) {
                     when {
                         age > 65 -> "Người già"
                         age >= 6 -> "Người lớn"
